@@ -10,6 +10,8 @@ if (require("electron-squirrel-startup")) {
 const createWindow = () => {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
+        minWidth: 350,
+        minHeight: 600,
         width: 350,
         height: 600,
         title: "Kanjozoku",
