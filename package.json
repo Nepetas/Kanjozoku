@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "Juan",
+    "name": "Juan, Meg",
     "email": "euanwalker2008@gmail.com"
   },
   "license": "MIT",
@@ -45,6 +45,7 @@
     }
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
