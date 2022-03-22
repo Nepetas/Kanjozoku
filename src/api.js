@@ -9,3 +9,10 @@ function test() {
         console.log(response);
     });
 }
+
+function exit() {
+    console.log("Closing...");
+    const { app } = require("electron");
+
+    app.quit();
+}

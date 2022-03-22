@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu, Tray } = require("electron");
 const path = require("path");
+const EventEmitter = require("events");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
@@ -10,15 +11,14 @@ if (require("electron-squirrel-startup")) {
 const createWindow = () => {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
-        width: 800,
+        width: 350,
         height: 600,
         title: "Kanjozoku",
         icon: path.join(__dirname, "icon.ico"),
-        minWidth: 380,
-        minHeight: 620,
         autoHideMenuBar: true,
-        titleBarStyle: "hidden",
-
+        skipTaskbar: true,
+        transparent: true,
+        frame: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
@@ -27,9 +27,33 @@ const createWindow = () => {
 
     // and load the index.html of the app.
     mainWindow.loadFile(path.join(__dirname, "index.html"));
-
+    mainWindow.setAlwaysOnTop(true, "screen");
+    mainWindow.setMinimizable(false);
     // Open the DevTools.
     //mainWindow.webContents.openDevTools();
+
+    let tray = null;
+    app.whenReady().then(() => {
+        tray = new Tray(path.join(__dirname, "icon.ico"));
+
+        const contextMenu = Menu.buildFromTemplate([{
+            label: "Close",
+            type: "normal",
+            click: () => app.quit(),
+        }, ]);
+
+        tray.setToolTip("Kanjozou Multi Tool");
+        tray.setContextMenu(contextMenu);
+        tray.setIgnoreDoubleClickEvents(true);
+
+        tray.on("click", function(e) {
+            if (mainWindow.isVisible()) {
+                mainWindow.hide();
+            } else {
+                mainWindow.show();
+            }
+        });
+    });
 };
 
 // This method will be called when Electron has finished

@@ -1,6 +1,61 @@
-html,
-body {
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400&display=swap");
+body,
+html {
+    font-family: "Red Hat Text", sans-serif;
     height: 100%;
-    overflow: hidden;
-    background-color: #111111;
+    margin: 0;
+    /*overflow: hidden;*/
+    text-rendering: geometricPrecision;
+}
+
+div {
+    padding: 0;
+}
+
+.top {
+    width: 100%;
+    margin: 0;
+}
+
+.topbar {
+    -webkit-app-region: drag;
+    padding: 15px;
+    border-radius: 10px;
+    float: right;
+    height: 70px;
+    width: 100px;
+}
+
+.rounded {
+    color: white;
+    background-color: #272727;
+    border-radius: 10px;
+    height: 100%;
+}
+
+h1 {
+    line-height: 125%;
+    margin: 0;
+    padding-top: 14px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h3 {
+    line-height: 125%;
+    margin: 0;
+    padding-bottom: 13px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #acacac;
+}
+
+button {
+    padding: 20px;
+}
+
+img {
+    max-width: 56px;
+    float: left;
+    padding: 14px;
 }
