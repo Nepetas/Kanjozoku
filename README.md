@@ -5,3 +5,6 @@
 # UI
 
 <img src="./src/sc.png" alt="drawing" width="300"/>
+
+# Credits 
+## UI and Electron Setup (most js as well...) by Juaneth, JSON parse and IP API stuff by Meg
