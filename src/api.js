@@ -1,34 +1,23 @@
 const axios = require("axios");
 
-document.addEventListener("keydown", logKey);
+let input = document.getElementById("ipinput");
 
-function logKey(e) {
-    console.log(e);
-}
+input.addEventListener("keyup", function (event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    api(input.value, "");
+  }
+});
 
 function api(ip, values) {
-    axios({
-        method: "get",
-        url: `http://ip-api.com/json/${ip}`,
-        responseType: "stream",
-    }).then(function(response) {
-        console.log(response);
-    });
-}
-
-function test() {
-    axios({
-        method: "get",
-        url: "http://ip-api.com/json/1.1.1.1",
-        responseType: "stream",
-    }).then(function(response) {
-        console.log(response);
-    });
-}
-
-function exit() {
-    console.log("Closing...");
-    const { app, app } = require("electron");
-
-    app.quit();
+  axios({
+    method: "get",
+    url: `http://ip-api.com/json/${ip}`,
+    responseType: "stream",
+  }).then(function (response) {
+    console.log(response);
+  });
 }
