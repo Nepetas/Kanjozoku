@@ -41,6 +41,30 @@ h1 {
     font-weight: 400;
 }
 
+.inputs {
+    margin-top: 40px;
+    text-align: center;
+    width: 100vw;
+}
+
+input {
+    text-align: center;
+    float: none;
+    margin: auto;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 10px;
+    border-style: hidden;
+    font-family: "Red Hat Text", sans-serif;
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
 h3 {
     line-height: 125%;
     margin: 0;

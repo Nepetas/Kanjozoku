@@ -1,5 +1,11 @@
 const axios = require("axios");
 
+document.addEventListener("keydown", logKey);
+
+function logKey(e) {
+    console.log(e);
+}
+
 function test() {
     axios({
         method: "get",
@@ -12,7 +18,7 @@ function test() {
 
 function exit() {
     console.log("Closing...");
-    const { app } = require("electron");
+    const { app, app } = require("electron");
 
     app.quit();
 }

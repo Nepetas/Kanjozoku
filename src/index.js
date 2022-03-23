@@ -19,6 +19,7 @@ const createWindow = () => {
         skipTaskbar: true,
         transparent: true,
         frame: false,
+        resizable: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
