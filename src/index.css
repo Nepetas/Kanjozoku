@@ -59,11 +59,16 @@ input {
   border-radius: 10px;
   border-style: hidden;
   font-family: "Red Hat Text", sans-serif;
-  background-color: rgb(29, 29, 29);
   color: white;
   transition: ease-in-out 150ms;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
   caret-color: rgb(128, 128, 128);
+  background: rgb(29, 29, 29);
+  background: linear-gradient(
+    140deg,
+    rgba(29, 29, 29, 1) 0%,
+    rgba(19, 19, 19, 1) 100%
+  );
 }
 
 input::placeholder {
@@ -113,4 +118,28 @@ img {
   max-width: 56px;
   float: left;
   padding: 14px;
+}
+
+table {
+  background-color: #181818;
+  margin: auto;
+  padding: 5px;
+  margin-top: 40px;
+  border-radius: 20px;
+  border-spacing: 5px;
+  background: rgb(29, 29, 29);
+  background: linear-gradient(
+    140deg,
+    rgba(29, 29, 29, 1) 0%,
+    rgba(19, 19, 19, 1) 100%
+  );
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+th,
+td {
+  background-color: rgb(43, 43, 43);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #181818;
 }
