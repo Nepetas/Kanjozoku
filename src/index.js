@@ -12,7 +12,7 @@ const createWindow = () => {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
         width: 350,
-        height: 600,
+        height: 605,
         title: "Kanjozoku",
         icon: path.join(__dirname, "icon.ico"),
         autoHideMenuBar: true,

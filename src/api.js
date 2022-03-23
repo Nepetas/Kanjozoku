@@ -6,6 +6,16 @@ function logKey(e) {
     console.log(e);
 }
 
+function api(ip, values) {
+    axios({
+        method: "get",
+        url: `http://ip-api.com/json/${ip}`,
+        responseType: "stream",
+    }).then(function(response) {
+        console.log(response);
+    });
+}
+
 function test() {
     axios({
         method: "get",
