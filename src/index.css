@@ -51,6 +51,10 @@ h1 {
     width: 100vw;
 }
 
+.outputs {
+    margin: 20px;
+}
+
 input {
     text-align: center;
     float: none;

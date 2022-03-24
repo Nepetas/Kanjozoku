@@ -9,6 +9,7 @@
         "package": "electron-forge package",
         "make": "electron-forge make",
         "publish": "electron-forge publish",
+        "build": "node build.js",
         "lint": "echo \"No linting configured\""
     },
     "keywords": [],
@@ -44,6 +45,7 @@
         }
     },
     "dependencies": {
+        "adm-zip": "^0.5.9",
         "axios": "^0.26.1",
         "electron-squirrel-startup": "^1.0.0"
     },
