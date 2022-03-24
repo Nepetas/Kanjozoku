@@ -1,145 +1,141 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400&display=swap");
 body,
 html {
-  font-family: "Red Hat Text", sans-serif;
-  height: 100%;
-  margin: 0;
-  text-rendering: geometricPrecision;
+    font-family: "Red Hat Text", sans-serif;
+    height: 100%;
+    margin: 0;
+    text-rendering: geometricPrecision;
+    overflow: hidden;
 }
 
 div {
-  padding: 0;
+    padding: 0;
 }
 
 .top {
-  width: 100%;
-  margin: 0;
+    width: 100%;
+    margin: 0;
 }
 
 .topbar {
-  -webkit-app-region: drag;
-  padding: 15px;
-  border-radius: 10px;
-  float: right;
-  height: 70px;
-  width: 100px;
+    -webkit-app-region: drag;
+    padding: 15px;
+    border-radius: 10px;
+    float: right;
+    height: 70px;
+    width: 100px;
 }
 
 .rounded {
-  color: white;
-  background-color: #272727e1;
-  border-radius: 10px;
-  height: calc(100% - 10px);
-  margin-bottom: 10px;
-  box-shadow: 0px 5px 3px -2px rgba(0, 0, 0, 0.25);
+    color: white;
+    background-color: #272727e1;
+    border-radius: 10px;
+    height: calc(100% - 10px);
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 3px -2px rgba(0, 0, 0, 0.25);
 }
 
 h1 {
-  line-height: 125%;
-  margin: 0;
-  padding-top: 14px;
-  font-size: 30px;
-  font-weight: 400;
-  /* supported by Chrome and Opera */
-  -webkit-user-select: none;
+    line-height: 125%;
+    margin: 0;
+    padding-top: 14px;
+    font-size: 30px;
+    font-weight: 400;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
 }
 
 .inputs {
-  margin-top: 40px;
-  text-align: center;
-  width: 100vw;
+    margin-top: 40px;
+    text-align: center;
+    width: 100vw;
 }
 
 input {
-  text-align: center;
-  float: none;
-  margin: auto;
-  padding: 10px;
-  font-size: medium;
-  border-radius: 10px;
-  border-style: hidden;
-  font-family: "Red Hat Text", sans-serif;
-  color: white;
-  transition: ease-in-out 150ms;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
-  caret-color: rgb(128, 128, 128);
-  background: rgb(29, 29, 29);
-  background: linear-gradient(
-    140deg,
-    rgba(29, 29, 29, 1) 0%,
-    rgba(19, 19, 19, 1) 100%
-  );
+    text-align: center;
+    float: none;
+    margin: auto;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 10px;
+    border-style: hidden;
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    transition: ease-in-out 150ms;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    caret-color: rgb(128, 128, 128);
+    background: rgb(29, 29, 29);
+    background: linear-gradient( 140deg, rgba(29, 29, 29, 1) 0%, rgba(19, 19, 19, 1) 100%);
 }
 
 input::placeholder {
-  color: rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
 }
 
 textarea:focus,
 input:focus {
-  outline: none;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    outline: none;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
 h3 {
-  line-height: 125%;
-  margin: 0;
-  padding-bottom: 13px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #acacac;
-  /* supported by Chrome and Opera */
-  -webkit-user-select: none;
-  /* supported by Chrome and Opera */
-  -webkit-user-select: none;
+    line-height: 125%;
+    margin: 0;
+    padding-bottom: 13px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #acacac;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
 }
 
 p {
-  /* supported by Chrome and Opera */
-  -webkit-user-select: none;
-  /* supported by Chrome and Opera */
-  -webkit-user-select: none;
-  color: rgb(88, 88, 88);
-  margin: 0;
-  padding: 0;
-  margin-top: 10px;
-  transition: ease-in-out 200ms;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    color: rgb(88, 88, 88);
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    transition: ease-in-out 200ms;
 }
 
 p:hover {
-  color: rgb(182, 182, 182);
+    color: rgb(182, 182, 182);
 }
 
 button {
-  padding: 20px;
+    padding: 20px;
 }
 
 img {
-  max-width: 56px;
-  float: left;
-  padding: 14px;
+    max-width: 56px;
+    float: left;
+    padding: 14px;
 }
 
 table {
-  background-color: #181818;
-  margin: auto;
-  padding: 5px;
-  margin-top: 40px;
-  border-radius: 20px;
-  border-spacing: 5px;
-  background: rgb(29, 29, 29);
-  background: linear-gradient(
-    140deg,
-    rgba(29, 29, 29, 1) 0%,
-    rgba(19, 19, 19, 1) 100%
-  );
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: #181818;
+    margin: auto;
+    padding: 5px;
+    margin-top: 40px;
+    border-radius: 20px;
+    border-spacing: 5px;
+    background: rgb(29, 29, 29);
+    background: linear-gradient( 140deg, rgba(29, 29, 29, 1) 0%, rgba(19, 19, 19, 1) 100%);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 th,
 td {
-  background-color: rgb(43, 43, 43);
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #181818;
+    text-align: center;
+    background-color: rgb(43, 43, 43);
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    border: 1px solid #181818;
 }
