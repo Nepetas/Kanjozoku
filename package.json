@@ -30,6 +30,7 @@
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
                         "name": "Kanjozoku",
+                        "productName": "Kanjozoku",
                         "icon": "src/icon.ico"
                     }
                 },
