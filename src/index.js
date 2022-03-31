@@ -1,7 +1,17 @@
 const { app, BrowserWindow, Menu, Tray } = require("electron");
 const path = require("path");
-const EventEmitter = require("events");
 
+const AutoLaunch = require('auto-launch');
+let autoLauncher = new AutoLaunch({
+    name: "Kanjozoku"
+});
+// Checking if autoLaunch is enabled, if not then enabling it.
+autoLauncher.isEnabled().then(function(isEnabled) {
+    if (isEnabled) return;
+    autoLauncher.enable();
+}).catch(function(err) {
+    throw err;
+});
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
     // eslint-disable-line global-require
@@ -25,6 +35,8 @@ const createWindow = () => {
             contextIsolation: false,
         },
     });
+
+    console.log(path.join(__dirname, "icon.ico"))
 
     // and load the index.html of the app.
     mainWindow.loadFile(path.join(__dirname, "index.html"));

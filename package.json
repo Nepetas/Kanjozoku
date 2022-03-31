@@ -4,6 +4,7 @@
     "version": "1.0.0",
     "description": "Kanjozoku Mutli-Tool",
     "main": "src/index.js",
+    "icon": "src/icon.ico",
     "scripts": {
         "start": "electron-forge start",
         "package": "electron-forge package",
@@ -14,17 +15,22 @@
     },
     "keywords": [],
     "author": {
-        "name": "Juan, Meg",
+        "name": "Juaneth and Nepeta",
         "email": "euanwalker2008@gmail.com"
     },
     "license": "MIT",
     "config": {
         "forge": {
-            "packagerConfig": {},
+            "packagerConfig": {
+                "name": "Kanjozoku",
+                "executableName": "Kanjozoku",
+                "icon": "src/icon.ico"
+            },
             "makers": [{
                     "name": "@electron-forge/maker-squirrel",
                     "config": {
-                        "name": "kanjozoku"
+                        "name": "Kanjozoku",
+                        "icon": "src/icon.ico"
                     }
                 },
                 {
@@ -45,7 +51,7 @@
         }
     },
     "dependencies": {
-        "adm-zip": "^0.5.9",
+        "auto-launch": "^5.0.5",
         "axios": "^0.26.1",
         "electron-squirrel-startup": "^1.0.0"
     },
@@ -55,6 +61,7 @@
         "@electron-forge/maker-rpm": "^6.0.0-beta.63",
         "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
         "@electron-forge/maker-zip": "^6.0.0-beta.63",
-        "electron": "17.1.2"
+        "electron": "17.1.2",
+        "adm-zip": "^0.5.9"
     }
 }
